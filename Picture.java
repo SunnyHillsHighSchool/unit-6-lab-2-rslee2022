@@ -367,6 +367,24 @@ public class Picture
   }
 
    ////////////////////// methods ///////////////////////////////////////
+  /** UNIT 1 LAB 2
+   * Method to turn all colors in the image to their negative - no parameters, void
+   */
+   public void negImg() {
+     //Create/initialize a Pixel array named pixelArr
+     Pixel[] pixelArr = this.getPixels();
+     //Loop/traverse through pixel array using for each loop with iterator variable Pixel p
+     for(Pixel p : pixelArr) {
+       //Get red of pixel p, subtract from 255, and set red for p 
+       p.setRed(255-p.getRed());
+       //Get blue of pixel p, subtract from 255, and set blue for p 
+       p.setBlue(255-p.getBlue());
+       //Get green of pixel p, subtract from 255, and set green for p
+       p.setGreen(255-p.getGreen());
+     }
+   }
+
+
   //precondition: amount is between 0 and 1
 public void decreaseBlue(double amount)
    {
